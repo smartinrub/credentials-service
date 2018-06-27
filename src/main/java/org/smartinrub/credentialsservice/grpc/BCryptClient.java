@@ -24,14 +24,14 @@ public class BCryptClient {
         bCryptServiceBlockingStub = BCryptServiceGrpc.newBlockingStub(managedChannel);
     }
 
-    public String checkHashedPassword(String password) {
+    public boolean checkHashedPassword(String password) {
         BCrypt.PasswordRequest passwordRequest = BCrypt.PasswordRequest.newBuilder().setPassword(password).build();
         LOGGER.info("client sending {}", passwordRequest);
 
         BCrypt.BCryptResponse bCryptResponse = bCryptServiceBlockingStub.checkHashedPassword(passwordRequest);
         LOGGER.info("client received {}", bCryptResponse);
 
-        return bCryptResponse.getMessage();
+        return bCryptResponse.getMessage().equals("true");
     }
 
 }
