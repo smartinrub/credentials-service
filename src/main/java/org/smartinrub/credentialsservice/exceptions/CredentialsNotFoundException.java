@@ -1,4 +1,4 @@
-package org.smartinrub.credentialsservice;
+package org.smartinrub.credentialsservice.exceptions;
 
 public class CredentialsNotFoundException extends RuntimeException {
 

@@ -1,5 +1,6 @@
-package org.smartinrub.credentialsservice;
+package org.smartinrub.credentialsservice.repositories;
 
+import org.smartinrub.credentialsservice.models.Credentials;
 import org.springframework.data.jpa.repository.Query;
 import org.springframework.data.repository.CrudRepository;
 

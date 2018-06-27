@@ -1,4 +1,4 @@
-package org.smartinrub.credentialsservice.client;
+package org.smartinrub.credentialsservice.grpc;
 
 import io.grpc.ManagedChannel;
 import io.grpc.ManagedChannelBuilder;

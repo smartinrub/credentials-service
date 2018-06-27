@@ -1,18 +1,19 @@
-package org.smartinrub.credentialsservice;
+package org.smartinrub.credentialsservice.controllers;
 
+import lombok.RequiredArgsConstructor;
+import org.smartinrub.credentialsservice.repositories.CredentialsRepository;
+import org.smartinrub.credentialsservice.exceptions.CredentialsNotFoundException;
+import org.smartinrub.credentialsservice.models.Credentials;
 import org.springframework.http.HttpStatus;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.servlet.ModelAndView;
 
 @Controller
+@RequiredArgsConstructor
 public class CredentialsController {
 
     private final CredentialsRepository credentialsRepository;
-
-    public CredentialsController(CredentialsRepository credentialsRepository) {
-        this.credentialsRepository = credentialsRepository;
-    }
 
     @GetMapping("/save")
     public ModelAndView index() {

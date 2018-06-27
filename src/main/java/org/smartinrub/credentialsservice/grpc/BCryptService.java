@@ -1,4 +1,4 @@
-package org.smartinrub.credentialsservice.server;
+package org.smartinrub.credentialsservice.grpc;
 
         import io.grpc.stub.StreamObserver;
         import org.lognet.springboot.grpc.GRpcService;

@@ -1,5 +1,6 @@
-package org.smartinrub.credentialsservice;
+package org.smartinrub.credentialsservice.handlers;
 
+import org.smartinrub.credentialsservice.exceptions.CredentialsNotFoundException;
 import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.ControllerAdvice;
 import org.springframework.web.bind.annotation.ExceptionHandler;
