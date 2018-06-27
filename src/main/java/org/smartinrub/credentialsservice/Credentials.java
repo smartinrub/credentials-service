@@ -14,11 +14,6 @@ public class Credentials {
 
     private String password;
 
-    public Credentials(String email, String password) {
-        this.email = email;
-        this.password = password;
-    }
-
     public Credentials() { }
 
     public String getPassword() {

@@ -1,0 +1,16 @@
+syntax = "proto3";
+
+//option java_multiple_files = true;
+package org.smartinrub.credentialsservice;
+
+message PasswordRequest {
+    string password = 1;
+}
+
+message BCryptResponse {
+    string message = 1;
+}
+
+service BCryptService {
+    rpc checkHashedPassword(PasswordRequest) returns (BCryptResponse);
+}

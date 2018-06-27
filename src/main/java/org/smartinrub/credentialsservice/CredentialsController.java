@@ -1,7 +1,6 @@
 package org.smartinrub.credentialsservice;
 
 import org.springframework.http.HttpStatus;
-import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.servlet.ModelAndView;
@@ -30,10 +29,11 @@ public class CredentialsController {
 
     @PostMapping("/login")
     @ResponseStatus(HttpStatus.OK)
-    public ResponseEntity<String> login(@RequestBody Credentials credentials) {
+    public String login(@RequestBody Credentials credentials)  {
+        credentialsRepository.findByEmail(
+                credentials.getEmail()).orElseThrow(() -> new CredentialsNotFoundException(credentials.getEmail()));
 
-
-        return ResponseEntity.ok().build();
+        return "success";
     }
 
 }
